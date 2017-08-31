@@ -176,12 +176,13 @@ export default {
     .seartText{
       width: 100%;
       height: calc(100% - 153px);
-      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
       ul{
-        padding-left: 20px;
+        padding:0 20px;
         li{
           list-style: circle ;
-          margin-bottom: 20px;
+          margin-bottom: 20px;      
           h3{
             font-size: 26px;
             line-height: 1.5;

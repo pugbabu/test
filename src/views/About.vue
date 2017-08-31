@@ -52,7 +52,7 @@ export default {
     .bg{
       width: 100%;
       height: 150px;
-      background: url("../../static/images/aboutMe.jpg") no-repeat center;
+      background: url("../assets/aboutMe.jpg") no-repeat center;
       background-size: cover; 
     }
   }
@@ -61,7 +61,7 @@ export default {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: url("../../static/images/dalei.jpg") no-repeat center -10px;
+      background: url("../assets/dalei.jpg") no-repeat center -10px;
       background-size:cover; 
       transform: translateY(-30px);
     }

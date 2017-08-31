@@ -88,14 +88,15 @@
         ind: 0,
         isShowSide: false,
         isShowWechat: false,
-        showSearch: false    
+        showSearch: false,
+        routePath: ''    
       }
     }, 
     components:{
       Search
     },
     created(){
-
+      this.$router.push('/index')
     },
     methods:{
       change(index) {
@@ -114,7 +115,9 @@
             this.$router.push('/meta')
             break;
           case 4:
+            this.routePath = String(this.$router.app._route.path)
             this.showSearch = true;
+            document.body.style.overflow = 'hidden';
             break;
           default:
             break;
@@ -139,7 +142,25 @@
         },3000)
       },
       closeSearch(data) {
+        switch (this.routePath) {
+          case '/index':
+            this.ind = 0;
+            break;
+          case '/class':
+            this.ind = 1;
+            break;
+          case '/about':
+            this.ind = 2;
+            break;
+          case '/meta':
+            this.ind = 3;
+            break;
+          default:
+            break;
+        }
+        this.$router.push(this.routePath);
         this.showSearch = data;
+        document.body.style.overflow = 'auto';        
       }
 
     }
@@ -404,7 +425,7 @@
       .weChat{
         width: 200px;
         height: 200px;
-        background: url("../../static/images/weixin.jpg") no-repeat center;;
+        background: url("../assets/weixin.jpg") no-repeat center;;
         margin: 30px auto;
         background-size: contain;
 
@@ -425,7 +446,7 @@
       bottom: 3px;
       width: 180px;
       height: 180px;
-      background: url("../../static/images/pug.png") no-repeat center;
+      background: url("../assets/pug.png") no-repeat center;
     }
    
   }
