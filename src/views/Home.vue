@@ -9,7 +9,7 @@
         </div>
         <nav class="animated bounceInRight">
           <ul> 
-            <li v-for="(item, index) in navList" :key="item.key" @click="change(index)">
+            <li v-for="(item, index) in navList" :key="item.key" @click="change(index)" class="animated bounceInDown">
                 <i class="icon" :class="ind == index ? 'iconActive'+index : 'icon'+index"></i>
                 <p :class="ind == index ? 'activeP' : ''">{{item.text}}</p>
             </li>        
@@ -215,6 +215,7 @@
             padding-bottom: 5px;    
             cursor: pointer;          
             font-size: 13px;
+            
             .icon{
               display: inline-block;
               width: 16px;
@@ -222,6 +223,7 @@
               margin-bottom: 10px;
               background-repeat: no-repeat;
               background-position: center center;
+              transition: all 1s ease-in-out;
             }
             .icon0{
               background-image: url('../../static/images/home.png')
@@ -258,7 +260,10 @@
             }
           }
           li:hover{
-            border-bottom: 1px solid #707070;
+            border-bottom: 1px solid #707070;        
+          }
+          li:hover .icon{
+            transform: rotate(360deg);
           }
         }
       }
@@ -310,6 +315,7 @@
       padding: 2px;
       background-color: #222;;
       cursor: pointer;
+      transition: all 0.5s linear;
       span{
         display:block;
         width: 24px;
@@ -327,6 +333,9 @@
       .botLine{
         top: 20px;
       }
+    }
+    .sideBar:hover{
+      transform: scale(0.8);
     }
     .sideContent{
       position: fixed;
@@ -351,6 +360,10 @@
             margin: 30px 0;
             background: url("../../static/images/pug.png") no-repeat center;
             background-size:cover; 
+            transition: all 1s linear;
+          }
+          .headImg:hover{
+            transform: rotate(360deg);
           }
       }
       nav{
@@ -439,14 +452,6 @@
         bottom: 45px;
         cursor: pointer;
       }
-    }
-    .pug{
-      position: fixed;
-      left: 0;
-      bottom: 3px;
-      width: 180px;
-      height: 180px;
-      background: url("../assets/pug.png") no-repeat center;
     }
    
   }

@@ -4,7 +4,7 @@
       <div class="content">
         <div class="bg"></div>
         <div class="info clearfix">
-          <div class="infoPic fl"></div>
+          <div class="infoPic fl animated zoomInDown"></div>
           <div class="infoContent fl">
             <p>
               <b>雷大敏</b>

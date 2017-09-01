@@ -1,5 +1,5 @@
 <template>
-    <div class="searchWrapper">
+    <div class="searchWrapper animated slideInDown">
       <div class="searchInner">
         <div class="searchHead">
             <div class="fl searchBtn">
@@ -190,6 +190,8 @@ export default {
             color: #555;
           }
           .content{
+            width: 100%;
+            box-sizing: border-box;
             font-size: 16px;
             font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
             line-height: 2;

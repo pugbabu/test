@@ -7,10 +7,10 @@
             <span style="font-size: 21px; color: #6f6f6f">CSS</span>
             <span style="font-size: 12px; color: #ccc">Git</span>
             <span style="font-size: 16.5px; color: #9d9d9d">HTML</span>   
-            <span style="font-size: 25.5px; color: #404040">JavaScript</span>
+            <span style="font-size: 25.5px; color: #404040" class="animated bounce">JavaScript</span>
             <span style="font-size: 16.5px; color: #9d9d9d">Web前端</span>
             <span>设计模式</span>
-            <span style="font-size: 25.5px; color: #404040">VUE</span>
+            <span style="font-size: 25.5px; color: #404040" class="animated shake">VUE</span>
             <span>NodeJS</span>
             <span>Webpack</span>
             <span>前端自动化</span>             
